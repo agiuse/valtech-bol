@@ -1,0 +1,21 @@
+!2 Dossier de tests de Bank Online
+
+!3 Authentification:
+- >TcA001: cas de succès
+- >TcA002: cas d'échec
+
+!3 Virement ponctuel:
+- >TcV001: cas de succès
+- >TcV002: cas d'échec
+
+
+>SetUp
+>TearDown
+>SuiteSetUp
+
+!define COLLAPSE_SETUP {true}
+!define COLLAPSE_TEARDOWN {true}
+!path ~/m2/repository/org/fitnesse/fitnesse/20111026/fitnesse-20111026.jar
+!path /fitlibrary.jar
+!path /selenium-java-client-driver.jar
+!path /SeleniumFitnesseBridge-1.0.jar

@@ -1,0 +1,3 @@
+start C:\Stagiaire\Softs\apache-maven-2.0.8\bin\mvn install:install-file -Dfile=fitnesse\fitnesse.jar -DgroupId=org.fitnesse -DartifactId=fitnesse -Dversion=20111026 -Dpackaging=jar
+start C:\Stagiaire\Softs\apache-maven-2.0.8\bin\mvn install:install-file -Dfile=fitnesse\ReflectionUtil.jar -DgroupId=com.schuchert -DartifactId=ReflectionUtil -Dversion=inconnue -Dpackaging=jar
+start C:\Stagiaire\Softs\apache-maven-2.0.8\bin\mvn install:install-file -Dfile=fitnesse\QueryResultBuilder.jar -DgroupId=com.schuchert -DartifactId=QueryResultBuilder -Dversion=inconnue -Dpackaging=jar

@@ -1,0 +1,4 @@
+|!-com.valtech.fit.fixtures.SeleniumBridgeFixture-!|
+!- Open a IE browser with selenium server runninng at localhost on port 4444-!
+!define champReferenceClient {referenceClient}
+|start Browser|*iehta|With Selenium Console On|localhost|At Port|4444|And Scripts At|http://www.google.com/|

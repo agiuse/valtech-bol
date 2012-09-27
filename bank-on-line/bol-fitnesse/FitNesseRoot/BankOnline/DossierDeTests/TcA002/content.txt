@@ -1,0 +1,9 @@
+!2 TCA001: Echec d'authentification
+
+!|user Opens URL|http://localhost:8080/bank-on-line|
+|ensure|page reloads in less than|5|seconds|
+|user types|0001|into field|referenceClient|
+|user types|mauvaismotdepasse|into field|motDePasse|
+|user clicks on|authentification|
+|ensure|page reloads in less than|5|seconds|
+|page contains text|Mot de passe ou reference client invalide|

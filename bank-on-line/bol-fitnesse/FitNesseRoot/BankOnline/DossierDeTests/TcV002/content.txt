@@ -1,0 +1,15 @@
+!2 TCV002: Création d'un virement refusée pour solde insuffisant
+
+!include -c .BankOnline.DossierDeTests.TcA001
+
+!|user clicks on link|Virement ponctuel|
+|ensure|page reloads in less than|5|seconds|
+|page contains text|Virement ponctuel|
+|user types|100-123-456|into field|compteEmetteur|
+|user types|200-123-456|into field|compteDestinataire|
+|user types|100000|into field|montant|
+|user types|Test T2B|into field|libelleOperation|
+|user clicks on|Create/Update|
+|ensure|page reloads in less than|5|seconds|
+|page contains text|Le solde du compte débiteur est insufisant|
+

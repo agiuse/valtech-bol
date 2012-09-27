@@ -1,0 +1,31 @@
+!2 UC 02: Effectuer un virement
+!3 Scenario nominal: Effectuer un virement ponctuel
+
+1. L'utilisateur indique qu'il souhaite effectuer un virement
+2. Le système affiche l'écran de saisie d'un virement. A cette étape, l'utilisateur a la possibilité d'indiquer qu'il souhaite effectuer un virement permanent [ReqF202]
+3. L'utilisateur saisie les information nécessaires au virement [ReqB002]
+4. Le système vérifie que le virement est possible [ReqB001]
+5. Le système débite le compte émetteur et crédite le compte destinataire du montant du virement
+
+!3 Exemple
+
+Etant donné la situation suivante
+|Il existe les comptes|
+|reference client|numero compte|type|solde|
+|0001|100-123-456|compte courant|500|
+|0001|200-123-456|epargne|500|
+
+|script|Effectuer virement|
+|virer compte emetteur|100-123-456|compte destinataire|200-123-456|libelle|constitution d'une épargne|montant|500|
+|check|solde compte emetteur|0.0|
+|check|solde compte destinataire|1000.0|
+
+|Query:consulter detail|100-123-456|
+|dateOperation|libelleOperation|montant|
+|aujourd'hui|constitution d'une épargne|-500.0|
+
+|Query:consulter detail|200-123-456|
+|dateOperation|libelleOperation|montant|
+|aujourd'hui|constitution d'une épargne|500.0|
+
+.BankOnline.DossierDeSpecifications

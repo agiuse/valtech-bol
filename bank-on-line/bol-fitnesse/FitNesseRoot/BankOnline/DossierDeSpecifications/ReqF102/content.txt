@@ -1,0 +1,28 @@
+!2 UC 01 Consulter ses comptes
+!2 REQ-F-102 Consulter le détail d'un compte
+L'utilisateur sélectionne un compte et indique au système qu'il souhaite consulter son détail
+Le système affiche la liste des opérations du compte sélectionné
+
+Exemple:
+
+Suposons la situation suivants
+!|Il existe les comptes|
+|referenceClient|numeroCompte|type|solde|
+|0001|100-123-456|compte courant|1000|
+
+!|Il existe les operations|
+|numeroCompte|dateOperation|libelleOperation|montant|
+|100-123-456|04/02/2008|Retrait|-20|
+|100-123-456|06/02/2008|Virement dest CPTE COMMUN|-500|
+|100-123-456|08/02/2008|RBT assurance maladie|34|
+|100-123-456|28/02/2008|Paye|2349|
+
+
+!|Consulter detail|100-123-456|
+|dateOperation|libelleOperation|montant|
+|04/02/2008|Retrait|-20|
+|06/02/2008|Virement dest CPTE COMMUN|-500|
+|08/02/2008|RBT assurance maladie|34|
+|28/02/2008|Paye|2349|
+
+.BankOnline.DossierDeSpecifications

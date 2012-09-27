@@ -1,0 +1,34 @@
+!path /home/testeurvaltecht/atdd/Stagiaire/Labs/bank-on-line/target/classes
+!path /home/testeurvaltecht/atdd/Stagiaire/Labs/bank-on-line/target/test-classes
+!path /home/testeurvaltecht/atdd/Stagiaire/Labs/bank-on-line/fitnesse/QueryResultBuilder.jar
+!path /home/testeurvaltecht/atdd/Stagiaire/Labs/bank-on-line/fitnesse/ReflectionUtil.jar
+
+!define COLLAPSE_SETUP {true}
+!define COLLAPSE_TEARDOWN {true}
+!define TEST_SYSTEM {slim}
+
+Voici la page d'accueil des spécifications de l'application Bank Online.
+
+Cas d'utilisation:
+ * UC 01 : Consulter ses comptes
+  * [[Scenario nominal][>ReqF101]]: Lister les comptes
+  * [[Scenario alternatif][>ReqF102]]: Consulter le détail d'un compte
+
+
+ * UC 02: Effectuer un virement
+  * [[Scenario nominal][>ReqF201]]: Effectuer un virement ponctuel
+  * [[Scénario nominal avec doFixture][<BankOnlineDoFixture.ReqF201]]: Effectuer un virement ponctuel
+  * [[Scenario alternatif][>ReqF202]]: Effectuer un virement permanent
+
+
+ * UC 03: Gestion login
+  * [[Scenario nominal][>ReqF301]]: Accepter ou Refuser un utilisateur
+
+[[Dossier de tests][DossierDeTests]] de Bank Online
+
+
+
+Voici la liste des jar qu'il faut inclure au classpath pour Spring, Hibernate et Hsqldb :
+
+Fichier de configuration de Spring:
+!path /home/testeurvaltecht/atdd/Stagiaire/Labs/bank-on-line/src/main/webapp/WEB-INF

@@ -1,0 +1,28 @@
+!2 UC 01 Consulter ses comptes
+!2 Scenario nominal: Afficher les comptes
+
+L'utilisateur demande au système de consulter sa situation financière
+Le système affiche la liste des comptes de l'utilisateur avec les informations suivantes:
+- numéro de compte
+- type de compte
+- débit
+- crédit
+
+Exemple: 
+
+Etant donné la situation suivante
+|Il existe les comptes|
+|referenceClient|numeroCompte|type|solde|
+|0001|100-123-456|compte courant|1000|
+|0001|200-123-456|epargne|800|
+|0001|300-123-456|carte crédit|-345|
+|0002|400-123-456|compte courant|100|
+
+Pour le client avec la référence 0001, on doit afficher la liste suivante
+|Query:Liste comptes|0001|
+|numeroCompte|type|solde|
+|100-123-456|compte courant|1000.0|
+|200-123-456|epargne|800.0|
+|300-123-456|carte crédit|-345.0|
+
+.BankOnline.DossierDeSpecifications

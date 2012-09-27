@@ -1,0 +1,23 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+  <head>
+    <title>Detail du compte</title>
+  </head>
+  <body>
+
+
+    	<h1>Reference client : ${displayInfo.clientName}</h1>
+    	<hr/>
+	
+    	<h1>Compte ${displayInfo.externalAccountId}</h1>	
+        	<t:grid source="operations"  row="operation">
+     	</t:grid>
+     	<hr/>
+     	
+     	<h1>Actions</h1>
+     	<p>
+        [<t:pagelink t:page="bank/ListCompte">Back</t:pagelink>]
+        </p>
+     	
+
+  </body>
+</html>

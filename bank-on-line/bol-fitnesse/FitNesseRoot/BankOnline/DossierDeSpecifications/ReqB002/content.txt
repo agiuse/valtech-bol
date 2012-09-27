@@ -1,0 +1,11 @@
+Les informations nécessaires à l'exécution d'un virement sont les suivantes:
+
+- compte émetteur (obligatoire)
+- compte destinataire (obligatoire)
+- montant du virement (obligatoire)
+- date d'exécution (obligatoire)
+- commentaire (optionel)
+
+
+.BankOnline.DossierDeSpecifications
+

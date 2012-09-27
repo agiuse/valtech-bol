@@ -1,0 +1,23 @@
+!2 REQ-B-001 : Vérifier que le virement est recevable
+
+Le montant compte émetteur doit être supérieur au montant du virement.
+Vérifier qu'un virement est recevable c'est-à-dire qu'il reste assez d'argent sur le compte émetteur.
+
+
+Exemple: 
+|Controler virement|
+|solde compte emetteur|montant virement|autorisation ?|
+|1000|200|true|
+|500|600|false|
+|1000|1000|true|
+|1000|0|false|
+|0|500|false|
+
+
+!2 REQ-B-001 Bis : Vérifier l'effet du virement sur le compte destinataire
+
+|Controler virement solde destinaire|
+|ancien solde|montant virement|nouveau solde ?|
+|1000|600|400|
+
+.BankOnline.DossierDeSpecifications

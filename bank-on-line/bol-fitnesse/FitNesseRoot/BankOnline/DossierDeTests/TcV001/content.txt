@@ -1,0 +1,27 @@
+!2 TCV001: Création d'un virement autorisé
+
+!include -c .BankOnline.DossierDeTests.TcA001
+
+!|user clicks on link|Virement ponctuel|
+|ensure|page reloads in less than|5|seconds|
+|page contains text|Virement ponctuel|
+|user types|100-123-456|into field|compteEmetteur|
+|user types|200-123-456|into field|compteDestinataire|
+|user types|100|into field|montant|
+|user types|Test T2B|into field|libelleOperation|
+|user clicks on|Create/Update|
+|ensure|page reloads in less than|5|seconds|
+|page contains text|Comptes|
+|user clicks on link|100-123-456|
+|ensure|page reloads in less than|5|seconds|
+|page contains text|Compte 100-123-456|
+|page contains text|Test T2B|
+|page contains text|-100|
+|user clicks on link|Back|
+|ensure|page reloads in less than|5|seconds|
+|page contains text|Comptes|
+|user clicks on link|200-123-456|
+|ensure|page reloads in less than|5|seconds|
+|page contains text|Compte 200-123-456|
+|page contains text|Test T2B|
+|page contains text|100|

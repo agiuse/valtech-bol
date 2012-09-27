@@ -1,0 +1,21 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+  <head>
+	
+    <title>Virement ponctuel</title>
+  </head>
+  <body>
+
+    <h1>Numero de client : ${displayInfo.clientName}</h1>
+    <hr/>
+
+    <h1>Virement ponctuel</h1>
+    <form t:id="transfertForm"/>
+	
+	<hr/>
+	<h1>Actions</h1>
+	<p>
+	[<t:pagelink t:page="bank/ListCompte">Cancel</t:pagelink>]
+	</p>
+
+  </body>
+</html>

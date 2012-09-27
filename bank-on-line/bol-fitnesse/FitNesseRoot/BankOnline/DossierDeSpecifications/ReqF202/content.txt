@@ -1,0 +1,21 @@
+L'utilisateur indique qu'il souhaite effectuer un virement permanent
+Le système affiche l'écran de saisie d'un virement permanent
+L'utilisateur saisie les informations et valide [.BankOnline.DossierDeSpecifications.ReqB003]
+Le système vérifie les informations, enregistre l'ordre de virement permanent, et crée la première échéance
+
+Exemple: 
+|Action Fixture.|
+|start|bankonline.fixtures.EffectuerVirement|
+|enter|emetteur100-123-456|
+|enter|destinataire|200-123-456|
+|enter|frequence|mensuelle|
+|enter|date|24/02/2008|
+|enter|libellé|virt permanent 01|
+|enter|montant|200|
+|press|Executer|
+|check|message|Virement enregistré|
+
+|rowFixture.|
+|0001|virt permanent 01|24/02/2008|en attente|200|
+
+.BankOnline.DossierDeSpecifications

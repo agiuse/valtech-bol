@@ -1,0 +1,9 @@
+Bienvenus sur la page d'accueil de !-FitNesse-!. 
+
+
+Ce serveur contient le référentiel des applications suivantes:
+
+'''- BankOnline'''
+
+
+En savoir plus sur FitNesse.

@@ -1,0 +1,30 @@
+!2 UC 03: Gestion login
+!2 Scenario nominal: Accepter ou Refuser un utilisateur
+
+
+!|Il existe les clients||
+|referenceClient|motDePasse|
+|0001|motsecret|
+|0002|motsecretClient2|
+
+|Action Fixture.||
+|start|Authentification|
+|enter|identifiant|0001|
+|enter|mot de passe|motsecret|
+|press|authentification||
+|check|connection|true|
+
+
+|Action Fixture.||
+|start|Authentification|
+|enter|identifiant|0001|
+|enter|mot de passe|motsecretClient2|
+|press|authentification||
+|check|connection|false|
+
+|Action Fixture.||
+|start|Authentification|
+|enter|identifiant|0002|
+|enter|mot de passe|motsecretClient2|
+|press|authentification||
+|check|connection|true|

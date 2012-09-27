@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.valtech.bankonline</groupId>
+	<artifactId>bol</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description></description>
+	<name>BOL - Parent</name>	
+
+	<modules>
+		<module>jee/bol-web</module>
+		<module>fitnesse</module>
+	</modules>
+	<distributionManagement>
+		<repository>
+			<id>inhouse.staging</id>
+			<name>Releases Repository</name>
+			<url>http://localhost:8080/nexus/content/groups/public/</url>
+		</repository>
+		<snapshotRepository>
+			<id>inhouse.staging</id>
+			<name>Releases Repository</name>
+			<url>http://localhost:8080/nexus/content/groups/public/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

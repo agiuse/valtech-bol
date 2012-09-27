@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="jpa" transaction-type="RESOURCE_LOCAL">
+		<!--  provider -->
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.valtech.bankonline.service.Operation</class>
+		<class>com.valtech.bankonline.service.Compte</class>
+		<class>com.valtech.bankonline.service.Client</class>
+		<properties>
+			<property name="hibernate.archive.autodetection"
+				value="class, hbm" />
+
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="use_sql_comments" value="true" />
+
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.HSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+		</properties>
+	</persistence-unit>
+</persistence>

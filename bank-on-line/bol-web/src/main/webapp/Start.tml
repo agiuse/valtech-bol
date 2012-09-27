@@ -1,0 +1,18 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <body>
+        <h1>Connection</h1>
+
+        <form t:id="form">
+
+            <t:errors/>
+
+            <t:label for="referenceClient"/>:
+            <input t:type="TextField" t:id="referenceClient" t:validate="required,minlength=3" size="30"/>
+            <p/>
+            <t:label for="motDePasse"/>:
+            <input t:type="PasswordField" t:id="motDePasse" t:validate="required,minlength=3" size="30"/>
+            <p/>
+            <input type="submit" value="authentification"/>
+        </form>
+    </body>
+</html>

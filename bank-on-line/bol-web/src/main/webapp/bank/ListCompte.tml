@@ -1,0 +1,34 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <body>
+    	<h1>Reference client : ${displayInfo.clientName}</h1>
+    	<hr/>
+        <h1>Comptes</h1>
+        <t:grid source="compteList"  row="compte"
+      		remove="id"
+        
+        >
+        	<t:parameter name="numeroCompteCell">
+       			
+                <t:actionlink t:id="link" context="compte.numeroCompte">${compte.numeroCompte}</t:actionlink>
+                
+                 
+
+            </t:parameter>
+            
+         
+     		
+     	</t:grid>
+     	<hr/>
+     	
+     	<h1>Actions</h1>
+		<p>
+		[<t:actionlink t:id="transfert" context="client">Virement ponctuel</t:actionlink>]
+		[<t:pagelink t:page="Start">Logout</t:pagelink>]
+        </p>
+     	
+     	
+     	
+     	
+
+    </body>
+</html>

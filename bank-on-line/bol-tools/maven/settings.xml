@@ -1,0 +1,119 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	
+	<mirrors>
+		<mirror>
+		<id>global-repository</id>
+		<name>Depot Nexus Public et Public Snapshot</name>
+		<url>http://localhost:8080/nexus/content/groups/global</url>
+		<mirrorOf>*</mirrorOf>
+		</mirror>
+	</mirrors>
+	
+	<servers>
+		<!-- Serveur (Nexus) de deploiement -->
+		<server>
+			<id>inhouse.staging</id>
+			<username>releases-deployment</username>
+			<password>nexus2012</password>
+		</server>
+	</servers>
+
+	<profiles>
+		<!-- Profil du repository public -->
+		<profile>
+			<id>public-repos</id>
+			<!-- Repositories public pour les plugins -->
+			<pluginRepositories>
+				<!-- Release -->
+				<pluginRepository>
+					<id>public.plugin</id>
+					<name>Public Plugins</name>
+					<url>http://localhost:8080/nexus/content/groups/public</url>
+					<layout>default</layout>
+				</pluginRepository>
+				<!-- Snapshot -->
+				<pluginRepository>
+					<id>plugin.snapshot</id>
+					<name>Public Plugins Snapshots</name>
+					<url>http://localhost:8080/nexus/content/groups/public-snapshots</url>
+					<layout>default</layout>
+				</pluginRepository>
+			</pluginRepositories>
+
+			<!-- Repositories pour les artifacts public -->
+			<repositories>
+				<!-- Repositories public des releases -->
+				<repository>
+					<id>public</id>
+					<name>Public</name>
+					<url>http://localhost:8080/nexus/content/groups/public</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<!-- Repositories public des snapshots -->
+				<repository>
+					<id>public.snapshot</id>
+					<name>Public Snapshots</name>
+					<url>http://localhost:8080/nexus/content/groups/public-snapshots</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+		<!-- Fin du profil du repository public -->
+
+		<!-- Profil du repository tiers -->
+		<profile>
+			<id>thirdparty-repos</id>
+			<!-- Repositories pour les artifacts tiers -->
+			<repositories>
+				<!-- Repositories des releases tierces -->
+				<repository>
+					<id>thirdparty</id>
+					<name>3rd party</name>
+					<url>http://localhost:8080/nexus/content/repositories/thirdparty</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<!-- Repositories des snapshots tiers -->
+				<repository>
+					<id>thirdparty-snapshots</id>
+					<name>3rd party Snapshots</name>
+					<url>http://localhost:8080/nexus/content/repositories/thirdparty-snapshots</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+		<!-- Fin du profil du repository tiers -->
+       </profiles>
+       
+	<activeProfiles>
+		<activeProfile>public-repos</activeProfile>
+		<activeProfile>thirdparty-repos</activeProfile>
+	</activeProfiles>
+
+</settings>
